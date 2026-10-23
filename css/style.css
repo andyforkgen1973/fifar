@@ -44,6 +44,11 @@ h3 { font-size: 1.2rem; font-weight: 800; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-text strong { font-family: var(--display); font-weight: 400; font-size: 1.6rem; letter-spacing: .04em; }
 .brand-text small { font-size: .68rem; text-transform: uppercase; letter-spacing: .14em; opacity: .7; }
+.club-badge { display: flex; align-items: center; gap: 10px; margin-right: auto; padding-left: 20px; border-left: 1px solid var(--line); color: rgba(255,255,255,.6); font-size: .66rem; text-transform: uppercase; letter-spacing: .12em; line-height: 1.3; }
+.club-badge img { width: 52px; height: 52px; flex: none; filter: drop-shadow(0 2px 6px rgba(0,0,0,.35)); }
+.club-badge b { color: #fff; font-weight: 700; letter-spacing: .06em; }
+.brand-text small, .club-badge span { white-space: nowrap; }
+@media (max-width: 1320px) and (min-width: 1201px) { .club-badge span { display: none; } }
 .nav ul { list-style: none; display: flex; gap: 2px; margin: 0; padding: 0; }
 .nav a { display: block; padding: 8px 12px; border-radius: 999px; color: rgba(255,255,255,.82); text-decoration: none; font-weight: 600; font-size: .9rem; transition: background .2s, color .2s; }
 .nav a:hover { color: #fff; background: rgba(255,255,255,.08); }
@@ -54,7 +59,7 @@ h3 { font-size: 1.2rem; font-weight: 800; }
 .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-@media (max-width: 1060px) {
+@media (max-width: 1200px) {
   .nav-toggle { display: block; }
   .nav { position: absolute; top: 72px; left: 0; right: 0; background: var(--pitch); border-bottom: 1px solid var(--line); display: none; }
   .nav.open { display: block; }
@@ -89,6 +94,7 @@ h3 { font-size: 1.2rem; font-weight: 800; }
 .kicker.dark { color: var(--pitch-3); background: rgba(20, 92, 56, .08); border-color: rgba(20, 92, 56, .18); margin-bottom: 12px; }
 .hero-badge { justify-self: center; position: relative; }
 .hero-badge img { width: min(340px, 80vw); border-radius: 28px; background: #fff; padding: 22px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.5); transform: rotate(3deg); }
+.hero-badge img.hero-crest { position: absolute; width: 120px; padding: 0; background: none; border-radius: 50%; left: -40px; bottom: -44px; transform: rotate(-6deg); box-shadow: 0 16px 30px -10px rgba(0,0,0,.6); z-index: 1; }
 .hero-badge::before { content: ""; position: absolute; inset: -18px; border-radius: 36px; border: 2px dashed rgba(255,255,255,.25); transform: rotate(-4deg); }
 .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
 
@@ -316,5 +322,8 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--p
   .scoreboard div { padding: 18px 16px; }
   .pitch-lines::before, .pitch-lines::after { width: 70px; height: 160px; }
   .brand-text small { display: none; }
+  .club-badge { padding-left: 12px; }
+  .club-badge img { width: 42px; height: 42px; }
+  .club-badge span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
