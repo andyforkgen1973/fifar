@@ -216,6 +216,9 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--p
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .form .btn { justify-self: start; }
 .form-note { margin: 0; font-size: .82rem; color: var(--muted); }
+.notice { background: #fff8db; border: 1px solid #f0d36b; border-left: 6px solid #e0a800; border-radius: 12px; padding: 18px 22px; margin-bottom: 24px; color: var(--ink); font-size: 1.05rem; }
+.suspended { filter: grayscale(1); opacity: .5; pointer-events: none; user-select: none; }
+.email-panel .btn { word-break: break-all; }
 
 /* members */
 .member-tools { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; margin-bottom: 32px; position: sticky; top: 72px; z-index: 5; background: var(--paper); padding: 16px 0; }
